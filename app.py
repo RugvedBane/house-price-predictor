@@ -87,10 +87,10 @@ st.markdown('<div class="section-label">🏘️ Housing Details</div>', unsafe_a
 col3, col4 = st.columns(2)
 with col3:
     housing_median_age = st.slider("Median House Age (yrs)", 1, 52, 20)
-    total_rooms        = st.number_input("Total Rooms",    value=5)
+    total_rooms        = st.number_input("Total Rooms",    value=2000)
 with col4:
-    total_bedrooms     = st.number_input("Total Bedrooms", value=2)
-    households         = st.number_input("Households",     value=3)
+    total_bedrooms     = st.number_input("Total Bedrooms", value=400)
+    households         = st.number_input("Households",     value=400)
 
 # Demographics
 st.markdown('<div class="section-label">👥 Demographics</div>', unsafe_allow_html=True)
