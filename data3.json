@@ -1,0 +1,17 @@
+{
+    "users": [
+        {"id": 1, "name": " Rahul ", "friends": [2, 3, 3], "liked_pages": [201]},
+        {"id": 2, "name": "Anita", "friends": [1, null], "liked_pages": [202, 202]},
+        {"id": 3, "name": "  ", "friends": [1, 4], "liked_pages": [203]},
+        {"id": 4, "name": "Karan", "friends": [2, 5], "liked_pages": []},
+        {"id": 5, "name": "Anita", "friends": [], "liked_pages": null},
+        {"id": 6, "name": null, "friends": [1], "liked_pages": [201]}
+    ],
+    "pages": [
+        {"id": 201, "name": "Python Learners"},
+        {"id": 202, "name": " Data Science Hub "},
+        {"id": 203, "name": ""},
+        {"id": 204, "name": "AI Community"},
+        {"id": 202, "name": "DS Enthusiasts"}
+    ]
+}
