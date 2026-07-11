@@ -109,7 +109,7 @@ if st.button("✦ Predict House Price"):
         'ocean_proximity':    ocean
     }
 
-    response = requests.post('http://127.0.0.1:8000/predict', json=payload)
+    response = requests.post('https://house-price-predictor-1kl2.onrender.com/predict', json=payload)
     prediction = response.json()['prediction House Value']
 
     st.markdown(f"""
