@@ -1,16 +1,16 @@
-# California House Price Predictor 🏠
+# California House Price Predictor
 
 A production-deployed end-to-end machine learning web application that predicts median house prices in California based on location, housing, and demographic features.
 
-## 🔗 Live Links
+## Live Links
 - **Frontend (Streamlit)**: https://house-price-predictor-rugved.streamlit.app
 - **Backend API (FastAPI)**: https://house-price-predictor-1kl2.onrender.com/docs
 
-> ⚠️ First request may take 30-60 seconds due to Render free tier cold start. Subsequent requests are instant.
+> **Note:** The first request may take 30-60 seconds due to Render free tier cold start. Subsequent requests are instant.
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -24,38 +24,44 @@ A production-deployed end-to-end machine learning web application that predicts 
 
 ---
 
-## ⚙️ Architecture
+## Architecture
 
-```
+```text
 User Input (9 features)
-        ↓
+        |
+        v
 Streamlit Frontend
-        ↓
+        |
+        v
 FastAPI Backend (Render)
-        ↓
+        |
+        v
 Feature Engineering (3 new features created)
-        ↓
-Preprocessing Pipeline (impute → scale → encode)
-        ↓
+        |
+        v
+Preprocessing Pipeline (impute -> scale -> encode)
+        |
+        v
 LightGBM Model
-        ↓
+        |
+        v
 Predicted House Price
 ```
 
 ---
 
-## 📊 Model Performance
+## Model Performance
 
 | Model | R² Score | RMSE |
 |---|---|---|
 | Random Forest (baseline) | 0.82 | $48,359 |
 | LightGBM (Optuna tuned) | 0.86 | $42,772 |
 
-LightGBM with Optuna hyperparameter tuning reduced prediction error by ~$5,600 per house compared to the baseline Random Forest model.
+LightGBM with Optuna hyperparameter tuning reduced prediction error by approximately $5,600 per house compared to the baseline Random Forest model.
 
 ---
 
-## 🔧 Feature Engineering
+## Feature Engineering
 
 Three ratio features were engineered from the raw data:
 
@@ -67,7 +73,7 @@ Three ratio features were engineered from the raw data:
 
 ---
 
-## 📥 Input Features
+## Input Features
 
 | Feature | Type | Description |
 |---|---|---|
@@ -83,19 +89,19 @@ Three ratio features were engineered from the raw data:
 
 ---
 
-## 🚀 How It Works
+## How It Works
 
-1. User enters house features on the Streamlit frontend
-2. Frontend sends a POST request to the FastAPI backend on Render
-3. Backend performs feature engineering and preprocessing
-4. LightGBM model returns a predicted house price
-5. Prediction is displayed on the frontend
+1. User enters house features on the Streamlit frontend.
+2. Frontend sends a POST request to the FastAPI backend on Render.
+3. Backend performs feature engineering and preprocessing.
+4. LightGBM model returns a predicted house price.
+5. Prediction is displayed on the frontend.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
-```
+```text
 ├── api.py              # FastAPI backend
 ├── app.py              # Streamlit frontend
 ├── lgbm_model.pkl      # Trained LightGBM model
